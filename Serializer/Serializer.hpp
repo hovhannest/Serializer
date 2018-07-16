@@ -93,29 +93,9 @@ public:
         
         if(formater)
         {
-            formater->initFrom(data, ((MODEL*)this));
-//            if(!formater_->start(data)) return false;
-//
-//            for(int i = 0; i < dim(FORMATER<MODEL>::name); i++)
-//            {
-//                switch (FORMATER<MODEL>::name[0].pointer.type) {
-//                    case ModelMemberType::INT :
-//                        if(!formater_->add(((MODEL*)this)->*(FORMATER<MODEL>::name[0].pointer.AInt))) return false;
-//                        break;
-//
-//                    default:
-//                        break;
-//                }
-//            }
-//
-//            if(!formater_->end()) return false;
-            return true;
+            return formater->initFrom(data, ((MODEL*)this));
         }
         else return false;
-//
-//        cout << "ModelHelper " << FORMATER<MODEL>::name[0].name << " value = " << ((MODEL*)this)->*(FORMATER<MODEL>::name[0].pointer.AInt) <<  endl;
-//
-//        cout << "Dimention is " << dim(FORMATER<MODEL>::name) << endl;
     }
     
     template<template<typename M> class FORMATER>

@@ -93,9 +93,6 @@ public:
     }
     
 };
-
-
-
 constexpr const JsonMeta<MyModel> Json<MyModel>::name[];
 
 //template<>

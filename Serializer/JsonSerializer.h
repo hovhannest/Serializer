@@ -55,11 +55,6 @@ public:
     {
         return NULL;
     }
-    //static inline constexpr const JsonMeta<MODEL>* getName()
-    //{
-    //    return Json<MODEL>::name;
-    //};
-    
 };
 
 template<class MODEL>
@@ -114,22 +109,6 @@ public:
         json_object_put(myJson);
         json_tokener_free(tok);
         return true;
-//
-//        for(int i = 0; i < dim(Json<MODEL>::name); i++)
-//        {
-//            switch (Json<MODEL>::name[0].pointer.type) {
-//                case ModelMemberType::INT32 :
-//                    if(!add(dest->*(Json<MODEL>::name[0].pointer.AInt))) return false;
-//                    break;
-//
-//                default:
-//                    break;
-//            }
-//            cout << "MyFormaterInterface " << Json<MODEL>::name[i].name << " value = " << dest->*(Json<MODEL>::name[i].pointer.AInt) <<  endl;
-//
-//            cout << "Dimention is " << dim(Json<MODEL>::name) << endl;
-//        }
-        
     }
     
     virtual bool format(void* dest_)
